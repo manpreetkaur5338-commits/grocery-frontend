@@ -1,0 +1,52 @@
+/* ==========================================================================
+   Categories Section Styles
+   ========================================================================== */
+
+.categories-section {
+  padding: 64px 0 72px;
+  background-color: var(--bg);
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 18px;
+}
+
+/* Large Tablet: 4 columns */
+@media (max-width: 1200px) {
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .categories-section {
+    padding: 40px 0 48px;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+}
+
+/* Large Mobile: 4 cols */
+@media (max-width: 600px) {
+  .categories-section {
+    padding: 32px 0 40px;
+  }
+  .categories-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+}
+
+/* Small Mobile: 2 cols × 4 rows */
+@media (max-width: 420px) {
+  .categories-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+}

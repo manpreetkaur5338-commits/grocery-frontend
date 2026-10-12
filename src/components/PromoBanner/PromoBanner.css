@@ -1,0 +1,213 @@
+/* ==========================================================================
+   PromoBanner Styles
+   ========================================================================== */
+
+.promo-section {
+  padding: 48px 0 80px;
+  background-color: var(--bg);
+}
+
+.promo-card {
+  position: relative;
+  background-color: var(--dark-green);
+  border-radius: var(--radius-xl);
+  padding: 64px 72px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 56px;
+  overflow: hidden;
+  box-shadow: 0 20px 45px rgba(3, 30, 13, 0.22);
+}
+
+.promo-glow {
+  position: absolute;
+  top: -120px;
+  right: -120px;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(102, 149, 64, 0.25) 0%, rgba(3, 30, 13, 0) 70%);
+  pointer-events: none;
+}
+
+/* Left Copy */
+.promo-content {
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.promo-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 18px;
+}
+
+.promo-leaf-icon {
+  font-size: 16px;
+}
+
+.promo-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(38px, 4.4vw, 56px);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.promo-headline-accent {
+  color: var(--gold);
+}
+
+.promo-subtext {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--cream);
+  opacity: 0.9;
+  max-width: 480px;
+  margin-bottom: 28px;
+}
+
+.promo-features {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.promo-pill {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  background-color: rgba(237, 219, 184, 0.12);
+  color: var(--cream);
+  border: 1px solid rgba(237, 219, 184, 0.25);
+}
+
+.promo-btn {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  gap: 10px;
+  padding: 16px 36px;
+  border-radius: var(--radius-md);
+  background-color: var(--gold);
+  color: var(--dark-green);
+  font-size: 15px;
+  font-weight: 800;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px rgba(216, 167, 64, 0.25);
+}
+
+.promo-btn:hover {
+  background-color: #e5b34a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(216, 167, 64, 0.35);
+}
+
+.promo-btn:hover .promo-btn-icon {
+  transform: translateX(4px);
+}
+
+.promo-btn-icon {
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+
+/* Right Media */
+.promo-media {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promo-img-wrapper {
+  width: 100%;
+  max-width: 420px;
+  height: 380px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(237, 219, 184, 0.15);
+}
+
+.promo-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.promo-card:hover .promo-image {
+  transform: scale(1.04);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .promo-card {
+    grid-template-columns: 1fr;
+    padding: 48px 36px;
+    gap: 36px;
+  }
+  .promo-img-wrapper {
+    max-width: 100%;
+    height: 280px;
+  }
+  .promo-subtext {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .promo-section {
+    padding: 32px 0 60px;
+  }
+  .promo-card {
+    padding: 36px 22px;
+    border-radius: var(--radius-lg);
+  }
+  .promo-headline {
+    font-size: clamp(28px, 7.5vw, 38px);
+  }
+  .promo-subtext {
+    font-size: 14px;
+  }
+  .promo-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .promo-features {
+    gap: 8px;
+  }
+  .promo-img-wrapper {
+    height: 220px;
+  }
+}
+
+@media (max-width: 420px) {
+  .promo-card {
+    padding: 28px 16px;
+    gap: 24px;
+  }
+  .promo-headline {
+    font-size: clamp(24px, 7vw, 30px);
+  }
+  .promo-eyebrow {
+    font-size: 10px;
+  }
+  .promo-img-wrapper {
+    height: 180px;
+  }
+}

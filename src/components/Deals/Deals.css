@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Deals Section Styles
+   ========================================================================== */
+
+.deals-section {
+  padding: 40px 0 72px;
+  background-color: var(--bg);
+}
+
+.deals-header-sub {
+  font-size: 15px;
+  color: var(--brown);
+  max-width: 480px;
+}
+
+.deals-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.deal-card {
+  position: relative;
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  min-height: 260px;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.deal-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 36px rgba(3, 30, 13, 0.10);
+}
+
+.deal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 2;
+  max-width: 62%;
+}
+
+.deal-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+.deal-discount {
+  font-family: var(--font-sans);
+  font-size: 26px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.deal-title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.deal-description {
+  font-size: 13px;
+  line-height: 1.4;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.deal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--radius-full);
+  transition: all 0.2s ease;
+  margin-top: auto;
+}
+
+.deal-btn-icon {
+  font-size: 14px;
+  transition: transform 0.2s ease;
+}
+
+.deal-btn:hover .deal-btn-icon {
+  transform: translateX(4px);
+}
+
+/* Deal Media Background Accent */
+.deal-media {
+  position: absolute;
+  right: -15px;
+  bottom: -15px;
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: 4px solid rgba(255, 255, 255, 0.4);
+}
+
+.deal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.deal-card:hover .deal-image {
+  transform: scale(1.08);
+}
+
+/* Individual Color Variations */
+
+/* 1. Terracotta Theme */
+.deal-terracotta {
+  background: linear-gradient(135deg, #FBEFEA 0%, var(--cream) 100%);
+  border: 1px solid rgba(185, 83, 48, 0.25);
+  color: var(--dark-green);
+}
+
+.deal-terracotta .deal-badge {
+  background-color: var(--terracotta);
+  color: var(--white);
+}
+
+.deal-terracotta .deal-discount {
+  color: var(--terracotta);
+}
+
+.deal-terracotta .deal-btn {
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+.deal-terracotta .deal-btn:hover {
+  background-color: var(--terracotta);
+  color: var(--white);
+}
+
+/* 2. Natural Green Theme */
+.deal-green {
+  background: linear-gradient(135deg, #EDF5E7 0%, var(--cream) 100%);
+  border: 1px solid rgba(102, 149, 64, 0.25);
+  color: var(--dark-green);
+}
+
+.deal-green .deal-badge {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+.deal-green .deal-discount {
+  color: var(--green);
+}
+
+.deal-green .deal-btn {
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+.deal-green .deal-btn:hover {
+  background-color: var(--green);
+  color: var(--white);
+}
+
+/* 3. Golden Yellow Theme */
+.deal-gold {
+  background: linear-gradient(135deg, #FAF4E5 0%, var(--cream) 100%);
+  border: 1px solid rgba(216, 167, 64, 0.35);
+  color: var(--dark-green);
+}
+
+.deal-gold .deal-badge {
+  background-color: var(--gold);
+  color: var(--dark-green);
+}
+
+.deal-gold .deal-discount {
+  color: var(--brown);
+}
+
+.deal-gold .deal-btn {
+  background-color: var(--dark-green);
+  color: var(--cream);
+}
+
+.deal-gold .deal-btn:hover {
+  background-color: var(--brown);
+  color: var(--white);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .deals-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .deal-card {
+    min-height: 220px;
+  }
+  .deal-content {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 600px) {
+  .deal-card {
+    padding: 24px 20px;
+  }
+  .deal-media {
+    width: 130px;
+    height: 130px;
+    right: -10px;
+    bottom: -10px;
+  }
+  .deal-discount {
+    font-size: 22px;
+  }
+}

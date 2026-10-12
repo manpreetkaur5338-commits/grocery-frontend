@@ -1,0 +1,21 @@
+/* ==========================================================================
+   FreshRoot App Styles
+   ========================================================================== */
+
+.freshroot-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg);
+  position: relative;
+  overflow-x: hidden;
+}
+
+#main-content {
+  flex: 1;
+}
+
+/* Ensure smooth section anchors */
+section {
+  scroll-margin-top: 90px;
+}

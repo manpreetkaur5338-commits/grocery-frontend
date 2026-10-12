@@ -1,0 +1,86 @@
+.protected-loading-screen {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 16px;
+  background-color: var(--bg);
+}
+
+.protected-loading-card {
+  background-color: var(--white);
+  padding: 40px 36px;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 16px 40px rgba(3, 30, 13, 0.08);
+  border: 1px solid rgba(237, 219, 184, 0.5);
+  text-align: center;
+  max-width: 420px;
+  width: 100%;
+  animation: fadeInPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeInPop {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.brand-badge-mini {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green);
+  margin-bottom: 20px;
+}
+
+.brand-badge-mini .badge-icon {
+  font-size: 15px;
+}
+
+.spinner-wrap {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(102, 149, 64, 0.12);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 18px;
+  color: var(--green);
+  font-size: 24px;
+}
+
+.auth-spinner {
+  animation: spinAuth 1s linear infinite;
+}
+
+@keyframes spinAuth {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.protected-loading-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-green);
+  margin-bottom: 8px;
+}
+
+.protected-loading-card p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
