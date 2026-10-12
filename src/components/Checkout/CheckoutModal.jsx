@@ -190,7 +190,7 @@ const CheckoutModal = ({
       if (paymentMethod !== "COD") {
         setGatewayMessage(`Connecting to ${paymentMethod} Test Gateway...`);
         
-        const verifyRes = await fetch("http://localhost:3000/api/orders/verify-payment", {
+        const verifyRes = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/orders/verify-payment", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -243,7 +243,7 @@ const CheckoutModal = ({
         paymentData
       };
 
-      const orderRes = await fetch("http://localhost:3000/api/orders/create", {
+      const orderRes = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/orders/create", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(orderPayload)

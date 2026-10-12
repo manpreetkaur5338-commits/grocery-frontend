@@ -82,7 +82,7 @@ const MyOrdersModal = ({
       const userEmail = currentUser?.email;
 
       if (userEmail) {
-        const response = await fetch(`http://localhost:3000/api/orders/user/${encodeURIComponent(userEmail)}`);
+        const response = await fetch(`https://grocery-backend-1-hf2l.onrender.com/api/orders/user/${encodeURIComponent(userEmail)}`);
         if (response.ok) {
           const data = await response.json();
           fetchedOrders = data.orders || [];
@@ -144,7 +144,7 @@ const MyOrdersModal = ({
     setCancelling(true);
 
     try {
-      const response = await fetch(`http://localhost:3000/api/orders/${orderToCancel.orderId}/cancel`, {
+      const response = await fetch(`https://grocery-backend-1-hf2l.onrender.com/api/orders/${orderToCancel.orderId}/cancel`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ reason: cancelReason })

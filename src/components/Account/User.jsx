@@ -147,7 +147,7 @@ const User = ({ isOpen = true, onClose, onAuthSuccess, initialMode = "login" }) 
     setAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/login", {
+      const response = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -198,7 +198,7 @@ const User = ({ isOpen = true, onClose, onAuthSuccess, initialMode = "login" }) 
     setAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/register", {
+      const response = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -320,7 +320,7 @@ const User = ({ isOpen = true, onClose, onAuthSuccess, initialMode = "login" }) 
     setForgotAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/forgot-password", {
+      const response = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: forgotEmail.trim() })
@@ -374,7 +374,7 @@ const User = ({ isOpen = true, onClose, onAuthSuccess, initialMode = "login" }) 
     setForgotAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/verify-otp", {
+      const response = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/auth/verify-otp", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -433,7 +433,7 @@ const User = ({ isOpen = true, onClose, onAuthSuccess, initialMode = "login" }) 
     setForgotAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch("http://localhost:3000/api/auth/reset-password", {
+      const response = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/auth/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

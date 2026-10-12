@@ -189,7 +189,7 @@ const CheckoutPage = ({ onTrackOrder }) => {
       if (paymentMethod !== "COD") {
         setGatewayMessage(`Connecting to ${paymentMethod} Gateway...`);
 
-        const verifyRes = await fetch("http://localhost:3000/api/orders/verify-payment", {
+        const verifyRes = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/orders/verify-payment", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -245,7 +245,7 @@ const CheckoutPage = ({ onTrackOrder }) => {
         paymentData
       };
 
-      const orderRes = await fetch("http://localhost:3000/api/orders/create", {
+      const orderRes = await fetch("https://grocery-backend-1-hf2l.onrender.com/api/orders/create", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

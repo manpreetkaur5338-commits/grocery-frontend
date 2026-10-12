@@ -45,7 +45,7 @@ const AdminOrdersModal = ({ isOpen, onClose, onOrderStatusUpdated }) => {
     setAlert({ show: false, type: "", message: "" });
 
     try {
-      let url = "http://localhost:3000/api/orders/admin/all";
+      let url = "https://grocery-backend-1-hf2l.onrender.com/api/orders/admin/all";
       const params = [];
       if (statusFilter !== "All") params.push(`status=${encodeURIComponent(statusFilter)}`);
       if (searchQuery.trim()) params.push(`search=${encodeURIComponent(searchQuery.trim())}`);
@@ -101,7 +101,7 @@ const AdminOrdersModal = ({ isOpen, onClose, onOrderStatusUpdated }) => {
     setAlert({ show: false, type: "", message: "" });
 
     try {
-      const response = await fetch(`http://localhost:3000/api/orders/admin/${selectedOrder.orderId}/status`, {
+      const response = await fetch(`https://grocery-backend-1-hf2l.onrender.com/api/orders/admin/${selectedOrder.orderId}/status`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

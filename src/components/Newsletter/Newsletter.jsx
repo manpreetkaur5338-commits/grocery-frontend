@@ -21,7 +21,7 @@ const Newsletter = ({ onNotify }) => {
       setError("Please enter a valid email address.");
       return;
     }
-    fetch("http://localhost:3000/api/subscriber",{
+    fetch("https://grocery-backend-1-hf2l.onrender.com/api/subscriber",{
       method: "POST",
       headers: {
         "Content-Type": "application/json",

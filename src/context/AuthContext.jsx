@@ -3,7 +3,7 @@ import { createContext, useContext, useState, useEffect, useCallback } from "rea
 const AuthContext = createContext(null);
 
 const STORAGE_KEY = "freshroot_auth";
-const API_BASE = "http://localhost:3000/api/auth";
+const API_BASE = "https://grocery-backend-1-hf2l.onrender.com/api/auth";
 
 export const AuthProvider = ({ children }) => {
   // Read initial session from localStorage
