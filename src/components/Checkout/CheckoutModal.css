@@ -756,3 +756,50 @@
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 540px) {
+  .checkout-overlay {
+    padding: 10px;
+  }
+  .checkout-header {
+    padding: 20px 16px 14px;
+  }
+  .checkout-title {
+    font-size: 20px;
+  }
+  .checkout-body-grid {
+    padding: 16px 14px;
+    gap: 18px;
+  }
+  .form-grid-2,
+  .form-grid-3 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .form-actions-row {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+  .bank-options-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .checkout-overlay {
+    padding: 6px;
+  }
+  .checkout-title {
+    font-size: 18px;
+  }
+  .checkout-header {
+    padding: 16px 12px 12px;
+  }
+  .checkout-body-grid {
+    padding: 12px 10px;
+  }
+}

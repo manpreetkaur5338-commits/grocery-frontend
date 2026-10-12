@@ -15,6 +15,7 @@ import {
   FiTruck as FiTruckIcon
 } from "react-icons/fi";
 import { RiLeafLine } from "react-icons/ri";
+import categories from "../../data/categories";
 import "./Navbar.css";
 
 const Navbar = ({
@@ -29,7 +30,8 @@ const Navbar = ({
   currentUser = null,
   searchQuery = "",
   setSearchQuery,
-  onNavigate
+  onNavigate,
+  onSelectCategory
 }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -567,6 +569,38 @@ const Navbar = ({
                 </button>
               </li>
             </ul>
+
+            {/* Mobile Categories Quick Picker */}
+            <div className="mobile-drawer-categories">
+              <span className="mobile-drawer-section-title">Browse Categories</span>
+              <div className="mobile-categories-chips" role="group" aria-label="Grocery Categories">
+                <button
+                  type="button"
+                  className="mobile-category-chip"
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    if (onSelectCategory) onSelectCategory("All");
+                    else handleNavClick("products-section");
+                  }}
+                >
+                  🌱 All Items
+                </button>
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    type="button"
+                    className="mobile-category-chip"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      if (onSelectCategory) onSelectCategory(cat.name);
+                      else handleNavClick("products-section");
+                    }}
+                  >
+                    {cat.name}
+                  </button>
+                ))}
+              </div>
+            </div>
 
             <div className="mobile-menu-secondary-actions">
               <button 

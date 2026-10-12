@@ -185,6 +185,7 @@ const App = () => {
           searchQuery={searchQuery}
           setSearchQuery={setSearchQuery}
           onNavigate={scrollToSection}
+          onSelectCategory={handleSelectCategory}
         />
       )}
 

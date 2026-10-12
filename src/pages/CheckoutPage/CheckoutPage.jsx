@@ -340,7 +340,10 @@ const CheckoutPage = ({ onTrackOrder }) => {
 
           <div className="header-auth-pill">
             <FiShield className="shield-icon" />
-            <span>Authenticated Checkout: <strong>{currentUser?.name || currentUser?.email}</strong></span>
+            <span className="auth-pill-text">
+              <span className="auth-pill-prefix">Checkout: </span>
+              <strong>{currentUser?.name || currentUser?.email}</strong>
+            </span>
           </div>
 
           <Link to="/" className="exit-checkout-btn">
