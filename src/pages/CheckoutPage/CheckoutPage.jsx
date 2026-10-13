@@ -548,7 +548,7 @@ const CheckoutPage = ({ onTrackOrder }) => {
                         onChange={() => setPaymentMethod("COD")}
                       />
                       <div className="method-icon-circle cod">
-                        <FiDollarSign />
+                       ₹
                       </div>
                       <div className="method-details">
                         <div className="method-heading">
@@ -802,8 +802,8 @@ const CheckoutPage = ({ onTrackOrder }) => {
                         <>
                           <span>
                             {paymentMethod === "COD" 
-                              ? `Confirm & Place Order ($${total.toFixed(2)})` 
-                              : `Authorize & Pay $${total.toFixed(2)}`}
+                              ? `Confirm & Place Order (₹${total.toFixed(2)})` 
+                              : `Authorize & Pay ₹${total.toFixed(2)}`}
                           </span>
                           <FiArrowRight />
                         </>
@@ -832,10 +832,10 @@ const CheckoutPage = ({ onTrackOrder }) => {
                       <img src={item.image} alt={item.name} className="item-thumb" />
                       <div className="item-meta">
                         <span className="item-name">{item.name}</span>
-                        <span className="item-sub">Qty: {item.quantity} × ${item.price.toFixed(2)}</span>
+                        <span className="item-sub">Qty: {item.quantity} × ₹{item.price.toFixed(2)}</span>
                       </div>
                       <span className="item-line-total">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ₹{(item.price * item.quantity).toFixed(2)}
                       </span>
                     </li>
                   ))}
@@ -844,17 +844,17 @@ const CheckoutPage = ({ onTrackOrder }) => {
                 <div className="summary-breakdown">
                   <div className="breakdown-row">
                     <span>Subtotal</span>
-                    <span>${subtotal.toFixed(2)}</span>
+                    <span>₹{subtotal.toFixed(2)}</span>
                   </div>
                   <div className="breakdown-row">
                     <span>Farm Express Delivery</span>
                     <span>
-                      {shippingFee === 0 ? <span className="free-pill">FREE</span> : `$${shippingFee.toFixed(2)}`}
+                      {shippingFee === 0 ? <span className="free-pill">FREE</span> : `₹${shippingFee.toFixed(2)}`}
                     </span>
                   </div>
                   <div className="summary-total-row">
                     <span>Total Amount</span>
-                    <span className="grand-price">${total.toFixed(2)}</span>
+                    <span className="grand-price">₹{total.toFixed(2)}</span>
                   </div>
                 </div>
 

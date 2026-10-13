@@ -175,7 +175,7 @@ const OrderConfirmationModal = ({
             {/* Total Amount */}
             <div className="detail-meta-cell">
               <span className="meta-cell-label">Total Amount</span>
-              <strong className="total-amount-val">${Number(order.totalAmount || 0).toFixed(2)}</strong>
+              <strong className="total-amount-val">₹{Number(order.totalAmount || 0).toFixed(2)}</strong>
             </div>
 
             {/* Payment Method & Status */}

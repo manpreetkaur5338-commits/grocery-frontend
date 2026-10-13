@@ -785,8 +785,8 @@ const CheckoutModal = ({
                       <>
                         <span>
                           {paymentMethod === "COD" 
-                            ? `Confirm & Place Order ($${totalAmount.toFixed(2)})` 
-                            : `Authorize & Pay $${totalAmount.toFixed(2)}`}
+                            ? `Confirm & Place Order (₹${totalAmount.toFixed(2)})` 
+                            : `Authorize & Pay ₹${totalAmount.toFixed(2)}`}
                         </span>
                         <FiArrowRight />
                       </>
@@ -809,11 +809,11 @@ const CheckoutModal = ({
                       <img src={item.image} alt={item.name} className="summary-item-thumb" />
                       <div className="summary-item-text">
                         <span className="summary-item-name">{item.name}</span>
-                        <span className="summary-item-qty">Qty: {item.quantity} × ${item.price.toFixed(2)}</span>
+                        <span className="summary-item-qty">Qty: {item.quantity} × ₹{item.price.toFixed(2)}</span>
                       </div>
                     </div>
                     <span className="summary-item-price">
-                      ${(item.price * item.quantity).toFixed(2)}
+                      ₹{(item.price * item.quantity).toFixed(2)}
                     </span>
                   </li>
                 ))}
@@ -824,24 +824,24 @@ const CheckoutModal = ({
               <div className="summary-costs">
                 <div className="cost-row">
                   <span>Subtotal</span>
-                  <span>${subtotal.toFixed(2)}</span>
+                  <span>₹{subtotal.toFixed(2)}</span>
                 </div>
                 <div className="cost-row">
                   <span>Estimated Delivery</span>
                   <span>
-                    {shippingFee === 0 ? <span className="free-pill">FREE</span> : `$${shippingFee.toFixed(2)}`}
+                    {shippingFee === 0 ? <span className="free-pill">FREE</span> : `₹${shippingFee.toFixed(2)}`}
                   </span>
                 </div>
                 {discount > 0 && (
                   <div className="cost-row discount-row">
                     <span>FreshPromo Discount</span>
-                    <span>-${discount.toFixed(2)}</span>
+                    <span>-₹{discount.toFixed(2)}</span>
                   </div>
                 )}
                 <div className="summary-divider" />
                 <div className="cost-row total-row">
                   <span>Grand Total</span>
-                  <span className="total-value">${totalAmount.toFixed(2)}</span>
+                  <span className="total-value">₹{totalAmount.toFixed(2)}</span>
                 </div>
               </div>
 

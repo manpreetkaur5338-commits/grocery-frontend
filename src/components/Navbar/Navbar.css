@@ -284,8 +284,8 @@
 .cart-btn .cart-badge {
   background-color: var(--gold);
   color: var(--dark-green);
-  top: -5px;
-  right: -7px;
+  top: -10px;
+  right: -12px;
 }
 
 .cart-icon-wrapper {
@@ -937,8 +937,8 @@
     border-radius: 12px;
   }
   .cart-btn .cart-badge {
-    top: 2px;
-    right: 2px;
+    top: -11px;
+    right: -12px;
   }
 }
 

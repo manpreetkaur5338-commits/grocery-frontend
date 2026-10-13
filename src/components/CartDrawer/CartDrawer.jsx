@@ -68,7 +68,7 @@ const CartDrawer = ({
               <>
                 <FiTruck className="shipping-icon" />
                 <span>
-                  Add <strong>${amountRemaining.toFixed(2)}</strong> more for <strong>FREE Delivery</strong>
+                  Add <strong>₹{amountRemaining.toFixed(2)}</strong> more for <strong>FREE Delivery</strong>
                 </span>
               </>
             ) : (
@@ -82,7 +82,7 @@ const CartDrawer = ({
           </div>
           <div className="progress-track" role="progressbar" aria-valuenow={progressPercent} aria-valuemin="0" aria-valuemax="100">
             <div 
-              className={`progress-fill ${progressPercent === 100 ? "complete" : ""}`} 
+              className={`progress-fill ₹{progressPercent === 100 ? "complete" : ""}`} 
               style={{ width: `${progressPercent}%` }}
             ></div>
           </div>
@@ -112,7 +112,7 @@ const CartDrawer = ({
                     </div>
 
                     <h4 className="cart-item-name">{item.name}</h4>
-                    <span className="cart-item-unit">${item.price.toFixed(2)} / {item.unit}</span>
+                    <span className="cart-item-unit">₹{item.price.toFixed(2)} / {item.unit}</span>
 
                     <div className="cart-item-actions">
                       <div className="quantity-control" role="group" aria-label={`Quantity for ${item.name}`}>
@@ -136,7 +136,7 @@ const CartDrawer = ({
                       </div>
 
                       <span className="cart-item-total-price">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        ₹{(item.price * item.quantity).toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -172,7 +172,7 @@ const CartDrawer = ({
           <div className="cart-footer">
             <div className="cart-summary-row">
               <span>Subtotal</span>
-              <span className="summary-value">${subtotal.toFixed(2)}</span>
+              <span className="summary-value">₹{subtotal.toFixed(2)}</span>
             </div>
 
             <div className="cart-summary-row">
@@ -181,14 +181,14 @@ const CartDrawer = ({
                 {shippingFee === 0 ? (
                   <span className="free-tag">FREE</span>
                 ) : (
-                  `$${shippingFee.toFixed(2)}`
+                  `₹${shippingFee.toFixed(2)}`
                 )}
               </span>
             </div>
 
             <div className="cart-summary-total">
               <span>Total</span>
-              <span className="total-amount">${total.toFixed(2)}</span>
+              <span className="total-amount">₹{total.toFixed(2)}</span>
             </div>
 
             <button
