@@ -77,6 +77,9 @@ img, svg, picture {
   display: block;
   max-width: 100%;
 }
+#main-content{
+  margin-top: 60px;
+}
 
 a {
   color: inherit;
