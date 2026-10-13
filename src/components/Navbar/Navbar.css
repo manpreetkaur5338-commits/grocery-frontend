@@ -910,6 +910,9 @@
 
 /* 3. Tablet Portrait: <= 900px / 768px */
 @media (max-width: 900px) {
+  .navbar-user-dropdown-wrapper {
+    display: none ;
+  }
   .navbar-container {
     height: 70px;
     padding: 0 20px;
